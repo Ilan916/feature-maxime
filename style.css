@@ -1,0 +1,85 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.border {
+  background-color: white;
+  position: fixed;
+  z-index: 10;
+}
+
+.horizontal {
+  height: 20px;
+  left: 0;
+  right: 0;
+}
+
+.vertical {
+  width: 20px;
+  top: 0;
+  bottom: 0;
+}
+
+#borderTop { 
+  top: 0;
+  border-bottom: 2px solid black; 
+}
+#borderBottom { bottom: 0;   border-top: 2px solid black;  }
+#borderRight { right: 0; border-left: 2px solid black; }
+#borderLeft { left: 0; border-right: 2px solid black; }
+
+.coord {
+  position: fixed;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  z-index: 999;
+  height: auto;
+  font-size: 10px;
+}
+
+#lineX, #lineY {
+  position: absolute;
+  background-color: transparent;
+  z-index: 5;
+
+}
+
+
+.line {
+  position: fixed;
+  background-color: transparent;
+  z-index: 9;
+
+}
+
+#horizontalLine {
+  height: 1px;
+  left: 0;
+  right: 0;
+  border-top: dashed 1px #222;
+}
+
+#verticalLine {
+  width: 1px;
+  top: 0;
+  bottom: 0;
+  border-right: #222 dashed 1px;
+}
+
+#coordXBottom {
+  right: 20px; /* Écart pour la bande verticale de droite */
+  bottom: 0; /* Aligné avec le bord intérieur de la bande inférieure */
+}
+
+#coordYRight {
+  bottom: 20px; /* Ajustement pour ne pas dépasser la bande horizontale du bas */
+  right: -8px; /* Aligné avec le bord intérieur de la bande de droite */
+  transform: rotate(-90deg); /* Rotation du texte pour l'affichage vertical */
+  white-space: nowrap; /* Assure que le texte reste sur une seule ligne lors de la rotation */
+}
+
+
